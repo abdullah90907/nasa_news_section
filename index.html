@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>4Green Horizon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">4Green Horizon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" onclick="getMedia('all')">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li onclick="sendCategory(0)"><a class="dropdown-item" href="#">Images</a></li>
+                            <li onclick="sendCategory(1)"><a class="dropdown-item" href="#">Videos</a></li>
+                            <li onclick="getAPOD()"><a class="dropdown-item" href="#">APOD</a></li>
+                            <li onclick="sendCategory(3)"><a class="dropdown-item" href="#">EPIC</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section for categorized media -->
+    <div class="container mt-4">
+        <h3 id="categoryTitle">NASA Media</h3>
+        <div id="mediaBox" class="row"></div>
+        <div id="spinner" class="mySpin spinner-border text-warning"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

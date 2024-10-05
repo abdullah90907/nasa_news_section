@@ -1,0 +1,105 @@
+body {
+    background: url("https://i.ytimg.com/vi/ZOQ4jsDSdR0/maxresdefault.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+h3#categoryTitle {
+    padding: 3.5px;
+    color: white; /* Text color */
+    background: #ff9800; /* Background color */
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0 auto; /* Centers the title */
+    max-width: 600px; /* Sets a maximum width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow effect */
+    transition: transform 0.3s; /* Adds a smooth scaling effect on hover */
+}
+
+h3#categoryTitle:hover {
+    transform: scale(1.05); /* Slightly scales up the title on hover */
+}
+
+
+
+#mediaBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    visibility: hidden;
+}
+
+.mediaCard {
+    flex: 0 0 30%;  /* Each card will take 30% of the container's width on large screens */
+    margin: 15px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.mediaCard:hover {
+    transform: scale(1.05);
+}
+
+.mediaCard img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-header {
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-text {
+    color: #333;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: orange;
+    border: none;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #ff7043;
+}
+
+.mySpin {
+    margin: 50px auto;
+    display: block;
+    height: 10vh;
+    width: 10vh;
+    visibility: hidden;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1200px) {
+    .mediaCard {
+        flex: 0 0 48%;  /* Two cards per row on medium screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mediaCard {
+        flex: 0 0 100%;  /* One card per row on small screens */
+    }
+}
+
+
